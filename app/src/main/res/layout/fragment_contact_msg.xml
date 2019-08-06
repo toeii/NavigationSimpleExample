@@ -13,7 +13,7 @@
             android:paddingRight="50dp"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:text="关于"
+            android:text="姓名"
             android:textSize="24sp"
             android:textColor="#000"
             android:layout_centerHorizontal="true"

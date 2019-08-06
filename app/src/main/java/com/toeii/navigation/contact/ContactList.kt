@@ -59,10 +59,10 @@ class ContactAdapter(private var context: Context,private var datas: MutableList
         val mapData = datas[position]
         holder.itemView.iv_head_icon.setImageResource((mapData["icon"] ?: error("")).toInt())
         holder.itemView.tv_name.text = mapData["name"]
-        val phone = mapData["phone"]
         holder.itemView.rl_layout.setOnClickListener {
             val builder = Bundle()
-            builder.putString("phone",phone)
+            builder.putString("phone",mapData["phone"])
+            builder.putString("name", mapData["name"])
             Navigation.findNavController(holder.itemView).navigate(R.id.action_contactList_to_contactMessage,builder)
         }
     }
