@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.toeii.navigation"
+        applicationId "com.toeii.nav_graph"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -32,9 +32,9 @@ dependencies {
 
 
     def navigation_version = '2.1.0-beta02'
-    implementation "androidx.navigation:navigation-runtime-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "androidx.nav_graph:nav_graph-runtime-ktx:$navigation_version"
+    implementation "androidx.nav_graph:nav_graph-fragment-ktx:$navigation_version"
+    implementation "androidx.nav_graph:nav_graph-ui-ktx:$navigation_version"
 
 
 
