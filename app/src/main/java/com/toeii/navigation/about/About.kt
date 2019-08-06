@@ -17,15 +17,11 @@ class About : Fragment(){
 
         val view = inflater.inflate(R.layout.fragment_about, container, false)
 
-        val name = arguments?.getString("name") ?: "null"
         val phone = arguments?.getString("phone") ?: "null"
         view.findViewById<TextView>(R.id.tv_me).text = phone
 
         view.findViewById<Button>(R.id.btn_back).setOnClickListener {
-            val builder = Bundle()
-            builder.putString("phone",phone)
-            builder.putString("name",name)
-            Navigation.findNavController(view).navigate(R.id.action_about_to_contactMessage,builder)
+            Navigation.findNavController(view).popBackStack()
         }
 
         view.findViewById<Button>(R.id.btn_back_first).setOnClickListener {

@@ -29,7 +29,7 @@ class ContactMessage : Fragment(){
         }
 
         view.findViewById<Button>(R.id.btn_back).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_contactMessage_to_contactList)
+            Navigation.findNavController(view).popBackStack()
         }
 
         return view
