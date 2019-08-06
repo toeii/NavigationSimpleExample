@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation"
+        app:startDestination="@id/contactList">
+
+    <fragment android:id="@+id/contactList" android:name="com.toeii.navigation.contact.ContactList"
+              android:label="ContactList">
+        <action android:id="@+id/action_contactList_to_contactMessage"
+                app:destination="@id/contactMessage"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+        />
+    </fragment>
+
+    <fragment android:id="@+id/contactMessage" android:name="com.toeii.navigation.contact.ContactMessage"
+              android:label="ContactMessage">
+        <argument android:name="phone"
+                  android:defaultValue="null"/>
+
+        <action android:id="@+id/action_contactMessage_to_about"
+                app:destination="@id/about"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+        />
+        <action android:id="@+id/action_contactMessage_to_contactList"
+                app:destination="@id/contactList"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+        />
+    </fragment>
+
+    <fragment android:id="@+id/about" android:name="com.toeii.navigation.about.About"
+              android:label="About">
+
+        <argument android:name="phone"
+                  android:defaultValue="null"/>
+
+        <action android:id="@+id/action_about_to_contactList"
+                app:destination="@id/contactList"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+        />
+        <action android:id="@+id/action_about_to_contactMessage"
+                app:destination="@id/contactMessage"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+        />
+    </fragment>
+
+</navigation>

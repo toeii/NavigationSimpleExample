@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NavigationSimpleExample</string>
+
+
+    <string name="str_contact">联系人</string>
+    <string name="str_about">关于</string>
+    <string name="str_dial">拨号</string>
+
+
+
+</resources>
